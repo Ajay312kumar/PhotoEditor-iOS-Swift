@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoEditor_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="144-7x-2ES">
+                                <rect key="frame" x="0.0" y="115" width="393" height="571"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HW2-Xv-QdU">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="571"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HW2-Xv-QdU" secondAttribute="bottom" id="FXI-mo-7SO"/>
+                                    <constraint firstItem="HW2-Xv-QdU" firstAttribute="top" secondItem="144-7x-2ES" secondAttribute="top" id="IRr-eq-Wvc"/>
+                                    <constraint firstAttribute="trailing" secondItem="HW2-Xv-QdU" secondAttribute="trailing" id="O4U-83-BgU"/>
+                                    <constraint firstItem="HW2-Xv-QdU" firstAttribute="leading" secondItem="144-7x-2ES" secondAttribute="leading" id="Uzq-0v-bX1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y56-uj-JOK">
+                                <rect key="frame" x="113" y="725" width="167" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Pick Image"/>
+                                <connections>
+                                    <action selector="imagePickerBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fA5-mD-ZTy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y56-uj-JOK" secondAttribute="bottom" constant="45" id="DT0-5B-wGu"/>
+                            <constraint firstItem="Y56-uj-JOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="Zif-NT-PC7"/>
+                            <constraint firstItem="Y56-uj-JOK" firstAttribute="top" secondItem="144-7x-2ES" secondAttribute="bottom" constant="39" id="aso-Pq-COm"/>
+                            <constraint firstItem="144-7x-2ES" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="gar-fa-0AW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="144-7x-2ES" secondAttribute="bottom" constant="132" id="nTy-fr-RpZ"/>
+                            <constraint firstItem="144-7x-2ES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qCR-UO-BQp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y56-uj-JOK" secondAttribute="trailing" constant="113" id="qbZ-rw-Wns"/>
+                            <constraint firstItem="144-7x-2ES" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yaQ-n2-q91"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forEditImageView" destination="HW2-Xv-QdU" id="2Zq-qQ-BK1"/>
+                        <outlet property="imageBackView" destination="144-7x-2ES" id="48a-77-zho"/>
+                        <outlet property="imagePickerBtn" destination="Y56-uj-JOK" id="5vH-nA-WRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
